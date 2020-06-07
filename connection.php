@@ -3,8 +3,8 @@
 function Connect()
 {
 	$dbhost = "localhost";
-	$dbuser = "root";
-	$dbpass = "";
+	$dbuser = "debian-sys-maint";
+	$dbpass = "5hKR2pnjQ7O5RxF9";
 	$dbname = "online";
 
 	//Create Connection
