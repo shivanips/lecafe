@@ -66,9 +66,24 @@
 
 <?php
 
-require 'connection.php';
-$conn = Connect();
+// require 'connection.php';
+// $conn = Connect();
 
+$dbhost = "localhost";
+  $dbuser = "debian-sys-maint";
+  $dbpass = "5hKR2pnjQ7O5RxF9";
+  $dbname = "online";
+
+  //Create Connection
+  $conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die($conn->connect_error);
+  if($conn){
+    echo "Datbase Connected";
+  }
+  else
+  {
+    echo "Error DB ";
+  }
+  
 $fullname = $conn->real_escape_string($_POST['fullname']);
 $username = $conn->real_escape_string($_POST['username']);
 $email = $conn->real_escape_string($_POST['email']);
