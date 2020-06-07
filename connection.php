@@ -9,7 +9,13 @@ function Connect()
 
 	//Create Connection
 	$conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die($conn->connect_error);
-
+	if($conn){
+		echo "Datbase Connected";
+	}
+	else
+	{
+		echo "Error DB ";
+	}
 	return $conn;
 }
 ?>
